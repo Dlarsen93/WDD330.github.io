@@ -1,0 +1,52 @@
+body {
+    background-image: url(images/background.jpg);
+    background-size: 100%;
+    
+}
+
+header, footer {
+    border-style: double;
+    border-color: peachpuff;
+    border-radius: 15px;
+    background-color: rgba(69, 120, 203, 0.4)
+   
+}
+
+footer {
+    color: darkgray;
+    text-align: center;
+    font-size: 2em
+}
+
+.title {
+    text-align: center;
+    text-shadow: 0 0 15px #7CEAEF;
+    font-size: 5em;
+    color: white;
+}
+
+#container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  
+  #content {
+    width: 70vw;
+    color: darkgray;
+  }
+  
+  #content div {
+    height: 100vh;
+  }
+  
+  #table-of-content {
+    width: 30vw;
+    color: darkgray;
+    position: sticky;
+    top: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
