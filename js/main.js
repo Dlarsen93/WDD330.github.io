@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
 
     const headings = document.querySelectorAll('#content h3')

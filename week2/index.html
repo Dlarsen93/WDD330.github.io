@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Week 2 | WDD330 | Coding assignment</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/small.css">
+    </head>
+    <body>
+        <header>
+            <h1>Coding Assignment | Week 2</h1>
+        </header>
+
+        <h2>Step 1</h2>
+        <p>Enter in a word or phrase of your choice.</p>
+        <input id="userInput" type="text" />
+        <button id="userButton" onclick="buttonClick()">Click Me!</button>
+        <div id="userOutput"></div>
+
+        <h2>Step 2</h2>
+        <p>Enter in a number.</p>
+        <input id="step2Input" type="text" />
+        <button id="step2Button" onclick="stepTwo()">Click Me!</button>
+        <div id="step2Output"></div>
+
+        <h2>Step 3</h2>
+        <input id="step3FirstNumber" placeholder="enter a number" type="number" /><input
+        id="step3SecondNumber"
+        placeholder="enter a number"
+        type="number"
+        />
+        <button id="step3Button" onclick="add()">Add</button>
+        <div id="step3Output"></div>
+
+        <h2>Stretch Goals</h2>
+        <h2>Step 4</h2>
+        <p>Simple Javascript Calculator</p>
+
+         <div id="calculate"></div>
+            
+        
+            <input id="num1" type="number" min="0" max="10000">
+            <br>
+            <input id="num2" type="number" min="0" max="10000">
+            <button onclick="add()">Add</button>
+            <br>
+            <button id="subtract">Subtract</button>
+            <button id="multiply">Multiply</button>
+            <div id="plus"></div>
+
+        <script>
+        //Core Functions
+        function buttonClick() {
+            var input = document.getElementById('userInput').value;
+            var outputElement = document.getElementById('userOutput');
+
+            outputElement.innerHTML = 'You have entered: ' + input;
+        }
+
+        function stepTwo() {
+            var input = document.getElementById('step2Input').value;
+            var outputElement = document.getElementById('step2Output');
+            var inputInt = parseInt(input);
+            if (inputInt !== NaN) {
+            outputElement.innerHTML = 'total: ' + step2Number(inputInt);
+            }
+        }
+
+        function step2Number(number) {
+            let total = 0;
+            for (let i = 1; i <= number; i++) {
+            total += i;
+            }
+            return total;
+         }
+
+        function add() {
+            var num1 = document.getElementById('step3FirstNumber').value;
+            var num2 = document.getElementById('step3SecondNumber').value;
+            var outputElement = document.getElementById('step3Output');
+            var num1Float = parseFloat(num1);
+            var num2Float = parseFloat(num2);
+
+            if ((num1Float !== NaN) & (num2Float !== NaN)) {
+            const total = num1Float + num2Float;
+            outputElement.innerHTML = 'Your total sum is: ' + total;
+            }
+        }
+
+        // stretch Functions
+
+        function calculate() {
+            let number = document.getElementById('number').value;
+            let sum = 0;
+            for (let i = 0; i <= number; i++) {
+                sum += i;
+            }
+            document.getElementById('calculate').innerHTML = sum;
+        }
+
+        function add() {
+            let num1 = document.getElementById('num1').value;
+            let num2 = document.getElementById('num2').value;
+
+            document.getElementById('plus').innerHTML = Number(num1) + Number(num2);
+        }
+
+        const subtract = function subtract() {
+            let num1 = document.getElementById('num1').value;
+            let num2 = document.getElementById('num2').value;
+
+            document.getElementById('plus').innerHTML = Number(num1) - Number(num2);
+        }
+
+        const multiply = () => {
+
+            let num1 = document.getElementById('num1').value;
+            let num2 = document.getElementById('num2').value;
+
+            document.getElementById('plus').innerHTML = Number(num1) * Number(num2);
+        }
+
+        document.querySelector('#subtract').addEventListener('click', subtract);
+        document.querySelector('#multiply').addEventListener('click', multiply);
+        </script>
+        
+        <script src="js/main.js" async defer></script>
+    </body>
+</html>

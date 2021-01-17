@@ -1,19 +1,20 @@
 body {
     background-image: url(images/background.jpg);
     background-size: 100%;
-    
+    background-color: rgb(9, 75, 9);
+    color: white;
 }
 
 header, footer {
     border-style: double;
-    border-color: peachpuff;
+    border-color: rgb(190, 168, 149);
     border-radius: 15px;
-    background-color: rgba(69, 120, 203, 0.4)
+    background-color: rgba(238, 160, 16, 0.4)
    
 }
 
 footer {
-    color: darkgray;
+    color: white;
     text-align: center;
     font-size: 2em
 }
@@ -33,7 +34,7 @@ footer {
   
   #content {
     width: 70vw;
-    color: darkgray;
+    color: white;
   }
   
   #content div {
@@ -42,11 +43,15 @@ footer {
   
   #table-of-content {
     width: 30vw;
-    color: darkgray;
+    color: white;
     position: sticky;
     top: 0;
   }
 
   html {
     scroll-behavior: smooth;
+  }
+
+  ul li {
+    color: white;
   }
