@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .board td {
+            border-right: 3px solid black;
+            border-bottom: 3px solid black;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            font-size: 2em;
+        }
+        .board td:last-child {
+            border-right: 0;
+        }
+        .board tr:last-child td {
+            border-bottom: 0;
+        }
+
+        .reset {
+            border: 3px solid crimson;
+            background-color: rgb(230, 230, 230);
+            text-align: center;
+            width: 90px;
+            height: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="reset">Reset Game</div>
+    <table class="board">
+        <tr>
+            <td class="cell"></td>
+            <td class="cell"></td>
+            <td class="cell"></td>
+        </tr>
+        <tr>
+            <td class="cell"></td>
+            <td class="cell"></td>
+            <td class="cell"></td>
+        </tr>
+        <tr>
+            <td class="cell"></td>
+            <td class="cell"></td>
+            <td class="cell"></td>
+        </tr>
+    </table>
+
+    <script src="week4.js"></script>
+</body>
+</html>
