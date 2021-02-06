@@ -15,49 +15,113 @@
 
         <div id="container">
             <div id="content">
-              <h3>Week 1: Summary</h3>
-              <p>
-                Worked on introductions and getting our repository setup on GitHub.
-              </p>
-              <h3>Week 2: Summary</h3>
-              <p>Nothing to report.</p>
+              <section class="week-1">
+                <button type="button" class="collapsible"><h3>Week 1: Summary & Notes</h3></button>
+                <div class="content">
+                  <p>
+                    Worked on introductions and getting our repository setup on GitHub.
+                    </p>
+                </div>
+              </section>
 
-              <h3>Week 3: Summary</h3>
-              <p>This week for the team activity we worked on some more Javascript challenges. With out Teammates we were able to make a variety of things print to the console via tables and other methods. Over all this was a fun assignment anf I enjoyed it.</p>
-              <h4>Notes</h4>
-              <ol>
-                <h5>Chapter 5: Objects</h5>
-                <li>Function = method</li>
-                <li>Object literal – object that is created directly in language wrapping all properties and methods in curly braces</li>
-                <li>Usually will be const</li>
-                <li>Accessing properties – superman.name, superman[‘name’]</li>
-                <li>hasOwnProperty() method – checks object for properties</li>
+              <section class="week-2">
+                <button type="button" class="collapsible"><h3>Week 2: Summary & Notes</h3></button>
+                <div class="content">
+                  <p>Nothing to report.</p>
+                </div>
+              </section>
 
-                <h5>Chapter 6: Document Object Model (DOM)</h5>
-                <li>allows access to elements of web page</li>
-                <li>.nodeType helps you find out what type of node it is</li>
-                <li>Query selectors allows you to use css notation to find first element in document that matches selector</li>
-                <li>InnerHTML returns all child elements of element string</li>
-                <li>Live collections – getElementsByClassName(), update to reflect any changes on page</li>
+              <section class="week-3">
+                <button type="button" class="collapsible"><h3>Week 3: Summary & Notes</h3></button>
+                <div class="content">
+                  <p>This week for the team activity we worked on some more Javascript challenges. With out Teammates we were able to make a variety of things print to the console via tables and other methods. Over all this was a fun assignment anf I enjoyed it.</p>
+                <h4>Notes</h4>
+                <ol>
+                  <h5>Chapter 5: Objects</h5>
+                    <li>Function = method</li>
+                    <li>Object literal – object that is created directly in language wrapping all properties and methods in curly braces</li>
+                    <li>Usually will be const</li>
+                    <li>Accessing properties – superman.name, superman[‘name’]</li>
+                    <li>hasOwnProperty() method – checks object for properties</li>
 
-                <h5>chapter 7</h5>
-                <li>Event listener – sends an alert when something happens</li>
-                <li>.addEvenListener(“click”,  doSomething);</li>
-                <li>Can be called without node</li>
-                <li>Inline – onClick</li>
-                <li>Target property – returns reference to node</li>
-                <li>Events can include – mouse, keyboard, modifier keys, touch</li>
-                <li>.removeEventListener(‘click’, remove)</li>
+                  <h5>Chapter 6: Document Object Model (DOM)</h5>
+                    <li>allows access to elements of web page</li>
+                    <li>.nodeType helps you find out what type of node it is</li>
+                    <li>Query selectors allows you to use css notation to find first element in document that matches selector</li>
+                    <li>InnerHTML returns all child elements of element string</li>
+                    <li>Live collections – getElementsByClassName(), update to reflect any changes on page</li>
+
+                  <h5>chapter 7</h5>
+                    <li>Event listener – sends an alert when something happens</li>
+                    <li>.addEvenListener(“click”,  doSomething);</li>
+                    <li>Can be called without node</li>
+                    <li>Inline – onClick</li>
+                    <li>Target property – returns reference to node</li>
+                    <li>Events can include – mouse, keyboard, modifier keys, touch</li>
+                    <li>.removeEventListener(‘click’, remove)</li>
               </ol>
+                </div>
+              </section>
 
-              <h3>Week 4: Summary</h3>
-              <h4>Object oriented Programming has 3 main concepts</h4>
+              <section class="week-4">
+                <button type="button" class="collapsible"><h3>Week 4: Summary & Notes</h3></button>
+                <div class="content">
+                  <h4>Object oriented Programming has 3 main concepts</h4>
               <ol>
                 <li>Encapsulation - Part of the program are inside objects and only essental functionalities are oxposed to the end user.</li>
                 <li>Polymorphism - The same process to be used for different objects. Various objects can be used for the same method.</li>
                 <li>inheritance - You can take an object that already exists and inherit all its properites and methods.</li>
               </ol>
-              
+                </div>
+              </section>
+
+              <section class="week-5">
+                <button type="button" class="collapsible"><h3>Week 5: Summary & Notes</h3></button>
+                <div class="content">
+                  <h4>Testing and Debugging</h4>
+                <p>This week we learned about testing and debuggin in javascript. There are different
+                  tpyes of errors which will determine how we go about the process. Here are the types
+                  of errors you can encounter:</p>
+                  <ol>
+                    <li>Syntax Errors - errors that are detected by the compiler</li>
+                    <li>Runtime Errors - errors that cause a program to terminate abnormally</li>
+                    <li>Logic Errors - occer when a program does not perform the way it was intended to</li>
+                </ol>
+                <p>
+                    It's important to be able to recognize what errors we have so that we can properly
+                    test and debug them.
+                </p>
+                <h4>Concole.log()</h4>
+                <p>
+                    One debugging method is <i>console.log()</i>. Using this allows us to display a value in
+                    the console so we can see what value is being claculated and can see if it's our desired outcome.</p>
+                <p>
+                    a = 5; <br>
+                    b = 6; <br>
+                    c = a + b; <br>
+                    console.log(c); <br>
+                </p>
+                <p>
+                    By doing this we will see that c is equal to 11 and and know whether or not our program is working
+                    correctly.
+                </p>
+                <h4>Breakpoints</h4>
+                <p>
+                    Another method is by setting breakpoints. We can set breakpoints and when our code runs into one,
+                    it will stop executing and we can see the current values. We can then resume the program.
+                </p>
+                <h4>Debugger Keyword</h4>
+                <p>
+                    The <i>debugger</i> keyword is similar to settting a breakpoint. It stops the execution of
+                    the program where it is placed before continuing.
+                </p>
+                <p>
+                    var x = 15 * 5; <br>
+                    debugger; <br>
+                    document.getElementById("demo").innerHTML = x;
+                </p>
+                </div>
+              </section> 
             </div>
             <div id="table-of-content">
               <h2>table of contents</h2>
@@ -71,6 +135,7 @@
               <li>Week 2: <a href="./week2/index.html">Team Activity</a></li>
               <li>Week 3: <a href="./week3/index.html">Team Activity</a></li>
               <li>Week 4: <a href="./week4/w04TeamActivity.html">Team Activity</a></li>
+              <li>Week 5: <a href="./week5/index.html">Team Activity</a></li>
             </ul>
           </div>
 

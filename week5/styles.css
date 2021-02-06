@@ -6,28 +6,53 @@ body {
 
   }
   img {
-
     width: 100%;
-    float: left;
-    grid-template-columns: auto auto;
-    grid-column-start: 1;
-    grid-column-end: 1;
+    
   }
 
   .light {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
   }
 
-  .light > h1 {
-    grid-column: 1;
-  }
-
-  .light > img {
-    grid-column: 2;
+  .light > h2 {
+    width: 100%;
+    flex: 1 0 auto;
+    margin: auto;
+    text-align: center;
   }
 
   .light > div {
-    grid-column: 3;
+    width: 40%;
+    flex: 1 1 auto;
+    margin-left: 1em;
   }
+
+  main > h1 {
+    text-align: center;
+    padding: 1em;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .hikestyles{
+    padding: 0;
+    margin: 1em 0;
+    list-style-type: none;
+  }
+
+  .hikestyles div {
+    padding: 0 0.5em;
+  }
+
+  .hikestyles li > h2 {
+    text-align: center;
+  }
+
 
   
