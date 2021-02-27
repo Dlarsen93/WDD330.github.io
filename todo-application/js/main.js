@@ -5,7 +5,7 @@ const toDoList = new ToDoList();
 
 //launch app
 document.addEventListener("readystatechange", (event) => {
-    if (event.target.readystate === "complete") {
+    if (event.target.readyState === "complete") {
         initApp();
     }
 });

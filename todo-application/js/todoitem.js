@@ -3,7 +3,7 @@ export default class ToDoItem {
         this._id = null;
         this._item = null;
     };
-    getID() {
+    getId() {
         return this._id;
     };
 
