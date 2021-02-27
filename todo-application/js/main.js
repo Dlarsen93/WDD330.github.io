@@ -22,7 +22,7 @@ const initApp = () => {
     clearItems.addEventListener("click", (event) => {
         const list = toDoList.getList();
         if (list.length) {
-            const confirmed = confirm("Are you sure you eant to clear the entire list?");
+            const confirmed = confirm("Are you sure you want to clear the entire list?");
             if (confirmed) {
                 toDoList.clearList();
                 updatePersistentData(toDoList.getList());
@@ -89,6 +89,7 @@ const buildListItem = (item) => {
     div.appendChild(label);
     const container = document.getElementById("listItems");
     container.appendChild(div);
+    //TODO:console.log(buildListItem);
 };
 
 const addClickListenerToCheckbox = (checkbox) => {
@@ -115,6 +116,7 @@ const setFocusOnItemEntry = () => {
 
 const processSubmission = () => {
     const newEntryText = getNewEntry();
+    console.log(newEntryText);
     if(!newEntryText.length) return;
     const nextItemId = calcNextItemId();
     const ToDoItem = createNewItem(nextItemId, newEntryText);
