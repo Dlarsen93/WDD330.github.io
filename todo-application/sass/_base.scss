@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
+$default-font-color: #000;
+$background-color: #385A76;
+$container-bgcolor: #82AAA2;
+$container-bordercolor: #FFD6BA;
+$button-bordercolor: #440381;
+$button-textcolor: #000;
+$add-button-color: #273C2C;
+$clear-button-color: red;
+$primary-font: 'lobster two';
+
+@mixin mp($size) {
+    @media only screen and (min-width: $size) {
+        @content;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+html, body {
+    font-size: 16px;
+    font-family: $primary-font, sans-serif ;
+    color: $default-font-color;
+    width: 100%;
+    min-height: 100%;
+    @include mp(768px) {
+        font-size: 22px;
+    }
+}
+
+body {
+    padding: 20px;
+    background-color: $background-color;
+}
+
+section {
+    background-color: $container-bgcolor;
+    width: 90%;
+    max-width: 700px;
+    margin: auto;
+    border: 1px solid $container-bordercolor;
+    
+}
