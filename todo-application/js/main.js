@@ -89,7 +89,6 @@ const buildListItem = (item) => {
     div.appendChild(label);
     const container = document.getElementById("listItems");
     container.appendChild(div);
-    //TODO:console.log(buildListItem);
 };
 
 const addClickListenerToCheckbox = (checkbox) => {

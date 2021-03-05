@@ -1,0 +1,45 @@
+html {
+  font-size: 10px;
+  background: url(images/background.jpg) bottom center;
+  background-size: cover;
+}
+
+body,html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.drumkit {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.drum {
+  padding: 10px 30px;
+  margin: 10px;
+  text-align: center;
+  border: 5px double #f72585;
+  cursor: pointer;
+  background-color: #4cc9f0;
+  /* box-shadow: 1px 5px 1px 5px #f72585; */
+  
+}
+
+.playing {
+    transform: scale(1.1);
+    transition: all .07s ease;
+    color: deeppink;
+}
+
+@keyframes drum-animation {
+  from {
+    background-color: #fff;
+  }
+  to {
+    background-color: blue;
+  }
+}

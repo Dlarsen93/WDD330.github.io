@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Drum Kit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="drumkit" class="drumkit"></div>
+
+
+  <!-- <div class="keys">
+    <div data-key="65" class="key">
+      <kbd>A</kbd>
+      <span class="sound">clap</span>
+    </div>
+    <div data-key="83" class="key">
+      <kbd>S</kbd>
+      <span class="sound">hihat</span>
+    </div>
+    <div data-key="68" class="key">
+      <kbd>D</kbd>
+      <span class="sound">kick</span>
+    </div>
+    <div data-key="70" class="key">
+      <kbd>F</kbd>
+      <span class="sound">openhat</span>
+    </div>
+    <div data-key="71" class="key">
+      <kbd>G</kbd>
+      <span class="sound">boom</span>
+    </div>
+    <div data-key="72" class="key">
+      <kbd>H</kbd>
+      <span class="sound">ride</span>
+    </div>
+    <div data-key="74" class="key">
+      <kbd>J</kbd>
+      <span class="sound">snare</span>
+    </div>
+    <div data-key="75" class="key">
+      <kbd>K</kbd>
+      <span class="sound">tom</span>
+    </div>
+    <div data-key="76" class="key">
+      <kbd>L</kbd>
+      <span class="sound">tink</span>
+    </div>
+  </div> -->
+
+  <audio data-key="65" src="sounds/clap.wav"></audio>
+  <audio data-key="83" src="sounds/hihat.wav"></audio>
+  <audio data-key="68" src="sounds/kick.wav"></audio>
+  <audio data-key="70" src="sounds/openhat.wav"></audio>
+  <audio data-key="71" src="sounds/boom.wav"></audio>
+  <audio data-key="72" src="sounds/ride.wav"></audio>
+  <audio data-key="74" src="sounds/snare.wav"></audio>
+  <audio data-key="75" src="sounds/tom.wav"></audio>
+  <audio data-key="76" src="sounds/tink.wav"></audio>
+
+<script type="text/javascript">
+  var data = {
+    'A': {name: 'clap', sound: 'sounds/clap.wav'},
+    'S': {name: 'hihat', sound: 'sounds/hihat.wav'},
+    'D': {name: 'kick', sound: 'sounds/kick.wav'},
+    'F': {name: 'opanhat', sound: 'sounds/openhat.wav'},
+    'G': {name: 'boom', sound: 'sounds/boom.wav'},
+    'H': {name: 'ride', sound: 'sounds/ride.wav'},
+    'J': {name: 'snare', sound: 'sounds/snare.wav'},
+    'K': {name: 'tom', sound: 'sounds/tom.wav'},
+    'L': {name: 'tink', sound: 'sounds/tink.wav'},
+  };
+
+  const drumkit = document.getElementById('drumkit');
+
+  function drumming() {
+    for(var key in data) {
+      var drumElement = document.createElement('div');
+      drumElement.classList.add('drum');
+
+      var h2 = document.createElement('h2');
+      h2.textContent = key;
+
+      var span = document.createElement('span');
+      span.textContent = data[key].name;
+
+      drumElement.appendChild(h2);
+      drumElement.appendChild(span);
+      drumkit.appendChild(drumElement);
+
+      data[key].el = drumElement;
+
+      drumElement.addEventListener('click', function(drumming) {
+        var key = drumming.currentTarget.querySelector('h2').textContent;
+        playDrum(key);
+      });
+    }
+  };
+
+  function playDrum(key) {
+    var audio = new Audio();
+    audio.src = data[key].sound;
+    audio.play();
+
+    data[key].el.style.webkitAnimation = 'drum-animation 0.3s';
+    data[key].el.style.animation = 'drum-animation 0.3s';
+
+    data[key].el.classList.add("playing");
+    data[key].el.style.transform += "translateY(10px)";
+    if (data[key].el.style.transform >= "translateY(100px)") {
+    data[key].el.style.transform = "translateY(-60px)";
+    }
+
+    data[key].el.addEventListener('webkitAnimationEnd', removeAnimation);
+    data[key].el.addEventListener('animationEnd', removeAnimation);
+  };
+
+
+  function removeAnimation(event) {
+    event.currentTarget.style.webkitAnimation = 'none';
+    event.currentTarget.style.animation = 'none';
+    event.currentTarget.classList.remove("playing");
+  } 
+  
+
+  function handleKeyEvents(event) {
+    playDrum(event.key.toUpperCase());
+  }; 
+  
+  drumming();
+
+  window.addEventListener('keydown', handleKeyEvents);
+
+
+</script>
+
+
+</body>
+</html>
