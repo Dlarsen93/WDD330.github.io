@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta name = "viewport" content = "user-scalable=no,width=device-width">
+    <link href = "pokemon.css" rel = "stylesheet" type = "text/css">
+    <title>Starting Pokemon Choice</title>
+
+  </head>
+
+  <body>
+
+  
+
+  <h2 class="ColGuide">Use the number keys to save your player color: 
+    <div class = "ColNums">
+      <h2 class="RedCol">1</h2>
+      <h2 class="GreenCol">2</h2>
+      <h2 class="BlueCol">3</h2>
+      <h2 class="YellowCol">4</h2>
+      <h2 class="PinkCol">5</h2>
+    </div>
+    </h2>
+
+    <canvas></canvas>
+
+    
+    <script type = "text/javascript">
+
+      //src files declared in an array for convinience.
+      let files = ["js/controller.js", "js/display.js", "js/engine.js", "js/game.js", "js/main.js"];
+
+      for (let index = 0; index < files.length; index ++) {
+
+        let script = document.createElement("script");
+        script.setAttribute("type", "text/javascript");
+        script.setAttribute("src", files[index]);
+        document.head.appendChild(script);
+
+      }
+      
+    </script>
+    <script src="./js/pokeapi.js" async defer>
+    </script>
+
+<h1 class="title">Choose Your Pokemon</h1>
+<h1 id="pokedex">Pokedex</h1>
+    
+
+
+  </body>
+
+</html>

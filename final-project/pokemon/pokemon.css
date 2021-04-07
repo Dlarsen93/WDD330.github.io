@@ -1,5 +1,4 @@
-  
-/* Frank Poth 02/28/2018 */
+
 
 * { box-sizing:border-box; margin:0; padding:0; }
 
@@ -17,7 +16,7 @@ body {
 
 }
 
-/* 04/07/2018 */
+
 
 canvas { image-rendering:pixelated; }
 
@@ -58,4 +57,45 @@ canvas { image-rendering:pixelated; }
   font-size:1.5em;
   text-decoration:none;
 
+}
+
+.ColGuide, #pokedex, .title {
+  color: white;
+}
+
+.ColNums {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.RedCol {
+  color: red;
+  padding: 1em;
+}
+
+.GreenCol {
+  color: green;
+  padding: 1em;
+}
+
+.BlueCol {
+  color: blue;
+  padding: 1em;
+}
+
+.YellowCol {
+  color: yellow;
+  padding: 1em;
+}
+
+.PinkCol {
+  color: #ff3c6f;
+  padding: 1em;
+}
+
+#pokedex {
+  color: blanchedalmond;
+  border: 5px solid red;
+  margin: 1em;
+  padding: .5em;
 }
